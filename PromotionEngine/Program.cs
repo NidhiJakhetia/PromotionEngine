@@ -1,12 +1,20 @@
-﻿using System;
+﻿using PromotionEngine.Models;
+using System;
+using System.Collections.Generic;
 
 namespace PromotionEngine
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            OrderProcessor orderProcessor = new OrderProcessor();
+
+            Order order = new Order(1, new List<Product>() { new Product("A"), new Product("B"), new Product("C") });
+
+            decimal totalOrderValue = orderProcessor.GetTotalOrderValue(order);
+
+            Console.WriteLine(totalOrderValue);
         }
     }
 }
