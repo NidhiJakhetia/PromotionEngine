@@ -14,15 +14,15 @@ namespace PromotionEngine.PromotionCheckerModule
             Dictionary<String, int> promotion2 = new Dictionary<String, int>();
             promotion2.Add("B", 2);
 
-            Dictionary<String, int> promotion33 = new Dictionary<String, int>();
-            promotion33.Add("C", 1);
-            promotion33.Add("D", 1);
+            Dictionary<String, int> promotion3 = new Dictionary<String, int>();
+            promotion3.Add("C", 1);
+            promotion3.Add("D", 1);
 
             IList<Promotion> activePromotions = new List<Promotion>()
             {
                 new Promotion(1, promotion1, 130),
                 new Promotion(2, promotion2, 45),
-                new Promotion(3, promotion33, 30)
+                new Promotion(3, promotion3, 30)
             };
 
             return activePromotions;
